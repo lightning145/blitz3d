@@ -153,6 +153,7 @@
       <OutputFile>..\_release\bin\linker.dll</OutputFile>
       <ImportLibrary>.\Release\linker.lib</ImportLibrary>
       <AdditionalDependencies>odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

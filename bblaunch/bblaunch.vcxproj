@@ -149,6 +149,7 @@
       <SubSystem>Windows</SubSystem>
       <OutputFile>..\_release\Blitz3D.exe</OutputFile>
       <AdditionalDependencies>dxguid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>

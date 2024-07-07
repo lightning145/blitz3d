@@ -109,6 +109,7 @@
       <SubSystem>Windows</SubSystem>
       <OutputFile>..\_release\bin\debugger.dll</OutputFile>
       <ImportLibrary>.\Release\debugger.lib</ImportLibrary>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">

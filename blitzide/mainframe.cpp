@@ -195,13 +195,9 @@ void MainFrame::OnDestroy(){
 }
 
 void MainFrame::setTitle( const string &s ){
-#ifdef PRO
+
 	SetWindowText( ("Blitz3D - "+s ).c_str() );
 	return;
-#else
-	SetWindowText( ("Blitz2D - "+s ).c_str() );
-	return;
-#endif
 }
 
 void MainFrame::OnClose(){
@@ -451,13 +447,7 @@ bool MainFrame::save( int n ){
 		e->setName( t );
 		insertRecent( t );
 	}
-	//Do backups!
-	if( prefs.edit_backup ){
-		for( int k=prefs.edit_backup;k>1;--k ){
-			CopyFile( (t+"_bak"+itoa(k-1)).c_str(),(t+"_bak"+itoa(k)).c_str(),false );
-		}
-		CopyFile( t.c_str(),(t+"_bak1").c_str(),false );
-	}
+	
 	int om=ios_base::binary|ios_base::out|ios_base::trunc;
 	ofstream out( t.c_str(),om );
 	if( !out.good() ){

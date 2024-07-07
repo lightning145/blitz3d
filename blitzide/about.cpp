@@ -88,11 +88,7 @@ void aboutBlitz( bool delay ){
 
 	string t="";
 
-#ifdef PRO
 	t+="Blitz3D";
-#else
-	t+="Blitz2D";
-#endif
 
 #ifdef EDU
 	t+=" - Educational Version";

@@ -124,10 +124,6 @@ void Editor::OnPaint(){
 	CRect tr( x,y,x+w,y+h );
 	dc.FillRect( &tr,&br );
 
-//	CRect ar( x,y,x+w,y+w );
-//	dc.DrawFrameControl( &ar,DFC_SCROLL,DFCS_SCROLLRIGHT );
-//	y+=w;h-=w;
-
 	CRect dr( x+2,y+2,x+w-2,y+h-2 );
 	dc.DrawEdge( &dr,EDGE_RAISED,BF_RECT );
 }
