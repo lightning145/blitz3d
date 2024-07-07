@@ -109,6 +109,8 @@ MainFrame::MainFrame():exit_flag(false){
 int MainFrame::OnCreate( LPCREATESTRUCT lpCreateStruct ){
 	CFrameWnd::OnCreate( lpCreateStruct );
 
+	SetClassLong(m_hWnd, GCL_HICON, (LONG)AfxGetApp()->LoadIcon("IDE (logo, no code) 32.ico"));
+
 	static HBITMAP toolbmp;
 	static SIZE imgsz,butsz;
 	static UINT toolbuts[]={ 
