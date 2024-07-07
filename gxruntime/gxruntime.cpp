@@ -76,7 +76,7 @@ gxRuntime *gxRuntime::openRuntime( HINSTANCE hinst,const string &cmd_line,Debugg
 	memset(&wndclass,0,sizeof(wndclass));
 	wndclass.style=CS_HREDRAW|CS_VREDRAW|CS_OWNDC;
 	wndclass.lpfnWndProc=::windowProc;
-	wndclass.hInstance=hinst;
+	wndclass.hInstance = hinst;
 	wndclass.lpszClassName="Blitz Runtime Class";
 	wndclass.hCursor=(HCURSOR)LoadCursor( 0,IDC_ARROW );
 	wndclass.hbrBackground=(HBRUSH)GetStockObject( BLACK_BRUSH );

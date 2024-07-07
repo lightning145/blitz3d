@@ -594,6 +594,7 @@ void bbOval( int x,int y,int w,int h,int solid ){
 }
 
 void bbText( int x,int y,BBStr *str,int centre_x,int centre_y ){
+	
 	if( centre_x ) x-=curr_font->getWidth( *str )/2;
 	if( centre_y ) y-=curr_font->getHeight()/2;
 	gx_canvas->text( x,y,*str );

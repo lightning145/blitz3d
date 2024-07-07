@@ -3,6 +3,7 @@
 #include "gxfont.h"
 #include "gxcanvas.h"
 #include "gxgraphics.h"
+#include "gxruntime.h"
 
 gxFont::gxFont( gxGraphics *g,gxCanvas *c,int w,int h,int b,int e,int d,int *os,int *ws ):
 graphics(g),canvas(c),
@@ -25,6 +26,7 @@ int gxFont::charWidth( int c )const{
 }
 
 void gxFont::render( gxCanvas *dest,unsigned color_argb,int x,int y,const string &t ){
+	
 	int width=getWidth( t );
 	if( width>t_canvas->getWidth() ){
 		graphics->freeCanvas( t_canvas );
@@ -37,7 +39,7 @@ void gxFont::render( gxCanvas *dest,unsigned color_argb,int x,int y,const string
 
 	int t_x=0;
 	for( int k=0;k<t.size();++k ){
-		int c=t[k]&0xff;
+		int c=t[k]& 0xff;
 		if( c<begin_char || c>=end_char ) c=def_char;
 		c-=begin_char;
 		int sx=(offs[c]>>16)&0xffff,sy=offs[c]&0xffff;
