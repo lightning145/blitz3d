@@ -15,6 +15,9 @@ public:
 		int *offs,int *widths );
 	~gxFont();
 
+	int measureCodepoint(char chr);
+	int decodeCharacter(char* buf, int index);
+
 	int charWidth( int c )const;
 	void render( gxCanvas *dest,unsigned color_argb,int x,int y,const std::string &t );
 
